@@ -15,6 +15,9 @@
 var pet = "turtle 🐢"
 
 
+print ("pet is a String")
+
+
 
 
 
@@ -24,6 +27,8 @@ var pet = "turtle 🐢"
  */
 var petName: String?
 
+print ("petName is an optional and it is not defined so it has value of nil")
+
 
 
 
@@ -32,7 +37,7 @@ var petName: String?
 /*: question3
  ### 3. Currently, what is the _value_ of `petName`?
  */
-
+print ("The value of petName is nil")
 
 
 
@@ -46,7 +51,7 @@ var petName: String?
 
 
 
-
+petName = "Fido"
 
 
 
@@ -54,6 +59,8 @@ var petName: String?
  ### 5. Print out `petName` using Swift's `print()` function. What do you expect to see in the console?
  */
 // write your code here
+
+print (petName)
 
 
 
@@ -70,12 +77,20 @@ var petName: String?
 
 
 
-
+if petName != nil {
+    print (petName)
+} else {
+    print ("There is no pet name")
+}
 
 /*: question7
  ### 7. Use _optional binding_ to unwrap the value of `petName` and print it to the console without all the **Optional(...)** stuff around it.
  */
 // write your code here
+
+if let petName = petName {
+    print (petName)
+}
 
 
 
@@ -89,11 +104,11 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
+if anotherPetName == nil {
+print ("The value of anotherPetName is nil")
 
 
-
-
-
+}
 
 /*: question9
  ### 9. Using optional binding, write an if statement that prints "anotherPetName has no value" if it is `nil`; otherwise, print the _unwrapped_ value of `anotherPetName`. What do you expect to see in the console?
@@ -101,6 +116,11 @@ var anotherPetName: String?
 // write your code here
 
 
+if let anotherPetName == nil {
+    print ("anotherPetName has no value")
+} else {
+    print (anotherPetName)
+}
 
 
 
@@ -115,7 +135,9 @@ var anotherPetName: String?
 
 
 
+let myPet: String? = "Droopy"
 
+print (myPet)
 
 
 
@@ -130,7 +152,8 @@ var anotherPetName: String?
 
 
 
-
+let anotherOne: String? = nil
+anotherOne = "Mishi"
 
 
 
